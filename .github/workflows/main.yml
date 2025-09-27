@@ -4,6 +4,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install libpango1.0-dev
+        run: sudo apt-get install -y libpango1.0-dev
       - name: Rendering Scenes
         uses: manim-kindergarten/manim_action_renderer@master
         id: renderer
